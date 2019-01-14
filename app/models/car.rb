@@ -1,7 +1,7 @@
 class Car
 
   attr_accessor :car_owner
-  attr_reader :make, :model, :classification
+  attr_reader :make, :model, :classification, :mechanic
 
   @@all =[]
 
@@ -24,5 +24,11 @@ class Car
     Mechanic.all.select {|mechanic| mechanic.specialty == self.classification}
   end
 
-
+  def mechanic=(new_mechanic)
+    if new_mechanic.specialty != self.classification
+      puts 'Wrong type'
+    else
+      @mechanic = new_mechanic
+    end
+  end
 end

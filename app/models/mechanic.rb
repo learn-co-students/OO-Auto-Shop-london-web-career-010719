@@ -16,7 +16,7 @@ class Mechanic
 
 
   def cars
-    Car.all.select {|car| car.classification == self.specialty}
+    Car.all.select {|car| car.mechanic == self}
   end
 
   def owners

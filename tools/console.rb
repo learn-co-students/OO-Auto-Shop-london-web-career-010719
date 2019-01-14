@@ -20,6 +20,7 @@ car3 = Car.new("Ferrari", "Fastcar", "New")
 car4 = Car.new("Fiat", "Punto", "Old")
 
 car1.car_owner = joey
+car1.mechanic = jay
 car2.car_owner = joey
 car3.car_owner = darc
 car4.car_owner = ben
